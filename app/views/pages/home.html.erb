@@ -1,9 +1,13 @@
-<h1>PR Tracker</h1>
-<p>
-  You've found the home page for the 
-  <%= link_to "PR Tracker", "#" %> 
-  application.
-</p>
-<p>
-  <%= link_to "Sign Up Now!", "#" %> 
-</p>
+<% if user_signed_in? %>
+  <h1>You're Logged In Gabrielle!</h1>
+<% else %>  
+  <h1>PR Tracker</h1>
+  <p>
+    You've found the home page for the 
+    <%= link_to "PR Tracker", "#" %> 
+    application.
+  </p>
+  <p>
+    <%= link_to "Sign Up Now!", new_user_registration_path %> 
+  </p>
+<% end %>
